@@ -1,0 +1,11 @@
+{
+	"name": "website-insights",
+	"version": "0.0.1",
+	"main": "index.js",
+	"author": "Mitchell Christ <xzmaru@gmail.com>",
+	"license": "MIT",
+	"private": true,
+	"workspaces": [
+		"packages/*"
+	]
+}
