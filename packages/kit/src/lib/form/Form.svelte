@@ -1,0 +1,11 @@
+<form {name} method="post" data-netlify="true" netlify-honeypot="bot-field">
+	<input name="form-name" value={name} type="hidden" />
+
+	<slot></slot>
+</form>
+
+<script>
+	export let name
+
+	export const prerender = true
+</script>
