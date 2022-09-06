@@ -6,6 +6,4 @@
 
 <script>
 	export let name
-
-	export const prerender = true
 </script>

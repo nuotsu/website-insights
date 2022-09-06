@@ -9,6 +9,7 @@
 		<h2>Get your site reviewed!</h2>
 
 		<Input name="name" label="Name" autocomplete="name" required />
+		<Input name="email" label="Email" type="email" placeholder="Email" required />
 		<Input name="url" label="Website URL" placeholder="https://example.com" required />
 		<Textarea name="message" label="Message" placeholder="Any comments or additional info you would like to mention?" />
 
