@@ -1,7 +1,8 @@
-<p>
-	<label for={name}>{label}</label>
-	<textarea id={name} {name} placeholder={label} {required} {...$$props} />
-</p>
+<label for={name}>
+	{label}{#if required}*{/if}
+</label>
+
+<textarea id={name} {name} placeholder={label} {required} {...$$props} />
 
 <script>
 	export let label, name, required = null
