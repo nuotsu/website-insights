@@ -1,4 +1,4 @@
-<section>
+<section class="debug">
 	<h2>Get your site reviewed!</h2>
 
 	<Form name="review-request" className="form">

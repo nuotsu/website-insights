@@ -5,5 +5,31 @@
 @layer base {
 	html {
 		accent-color: dodgerblue;
+		caret-color: dodgerblue;
 	}
+
+	summary {
+		cursor: pointer;
+	}
+}
+
+@layer components {
+	.link {
+		@apply underline hover:decoration-2;
+	}
+
+	/* richtext */
+	.richtext > * {
+		margin-top: 1em;
+	}
+
+	.richtext h2 { @apply h2; }
+}
+
+@layer utilities {
+	.debug {
+		border: 1px dashed red;
+	}
+
+	.h2 { @apply text-2xl font-bold; }
 }

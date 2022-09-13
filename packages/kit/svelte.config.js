@@ -8,6 +8,7 @@ const config = {
 		adapter: adapter(),
 		alias: {
 			'$data': 'src/data',
+			'$utils': 'src/utils',
 		},
 	},
 	preprocess: [
