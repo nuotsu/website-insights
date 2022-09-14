@@ -5,6 +5,9 @@
 	{:else if block.type == 'paragraph'}
 		<p><RichText rich_text={block.paragraph.rich_text} /></p>
 
+	{:else if block.type == 'image'}
+		<Image {...block.image} />
+
 	{:else if block.type == 'divider'}
 		<hr>
 
@@ -18,6 +21,7 @@
 
 <script>
 	import RichText from './RichText.svelte'
+	import Image from './Image.svelte'
 
 	export let blocks
 </script>

@@ -1,7 +1,11 @@
 <section>
-	{#each results as post}
-		<Post {...post} />
-	{/each}
+	<ul>
+		{#each results as post}
+			<li>
+				<Post {...post} />
+			</li>
+		{/each}
+	</ul>
 </section>
 
 <script>
