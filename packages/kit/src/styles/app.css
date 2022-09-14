@@ -6,6 +6,7 @@
 	html {
 		accent-color: dodgerblue;
 		caret-color: dodgerblue;
+		scroll-behavior: smooth;
 	}
 
 	summary {
@@ -17,13 +18,6 @@
 	.link {
 		@apply underline hover:decoration-2;
 	}
-
-	/* richtext */
-	.richtext > * + * {
-		margin-top: 1em;
-	}
-
-	.richtext h2 { @apply h2; }
 }
 
 @layer utilities {
@@ -31,12 +25,23 @@
 		border: 1px dashed red;
 	}
 
-	.h0 { @apply text-4xl font-bold; }
-	.h1 { @apply text-3xl font-bold; }
-	.h2 { @apply text-2xl font-bold; }
-
 	.full-width {
 		width: 100vw;
 		margin-inline: calc(50% - 50vw);
 	}
+
+	._h { @apply font-bold; }
+	.h0 { @apply _h text-4xl; }
+	.h1 { @apply _h text-3xl; }
+	.h2 { @apply _h text-2xl; }
+	.h3 { @apply _h text-xl; }
+
+	/* richtext */
+
+	.richtext > * + * {
+		margin-top: 1em;
+	}
+
+	.richtext h2 { @apply h2; }
+	.richtext h3 { @apply h3; }
 }

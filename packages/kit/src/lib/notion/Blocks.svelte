@@ -1,6 +1,6 @@
 {#each blocks as block}
-	{#if block.type == 'heading_2'}
-		<h2><RichText rich_text={block.heading_2.rich_text} /></h2>
+	{#if /^heading_\d+$/.test(block.type)}
+		<Heading {block} />
 
 	{:else if block.type == 'paragraph'}
 		<p><RichText rich_text={block.paragraph.rich_text} /></p>
@@ -20,6 +20,7 @@
 {/each}
 
 <script>
+	import Heading from './Heading.svelte'
 	import RichText from './RichText.svelte'
 	import Image from './Image.svelte'
 

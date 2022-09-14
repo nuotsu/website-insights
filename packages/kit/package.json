@@ -21,6 +21,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@notionhq/client": "^2.2.0"
+		"@notionhq/client": "^2.2.0",
+		"slugify": "^1.6.5"
 	}
 }

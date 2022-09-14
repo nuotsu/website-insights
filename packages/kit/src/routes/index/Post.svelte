@@ -1,7 +1,12 @@
-<a class="link" href="/blog/{id}">
-	<h2>{properties.Name.title[0].plain_text}</h2>
+<a class="link" href="/blog/{ slug(title) }">
+	<h2>{title}</h2>
 </a>
 
 <script>
-	export let id, properties
+	import { getProperty } from '$utils/notion-utils'
+	import slug from '$utils/slug'
+
+	export let properties
+
+	const title = getProperty({ properties }, 'Name')
 </script>
