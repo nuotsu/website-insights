@@ -9,6 +9,14 @@
 		scroll-behavior: smooth;
 	}
 
+	body {
+		@apply bg-paper text-ink dark:bg-ink dark:text-paper;
+	}
+
+	::selection {
+		@apply bg-accent text-white;
+	}
+
 	summary {
 		cursor: pointer;
 	}
@@ -16,7 +24,16 @@
 
 @layer components {
 	.link {
-		@apply underline hover:decoration-2;
+		text-decoration: underline;
+	}
+	.link:hover {
+		text-decoration: none;
+		box-shadow: inset 0 -0.5em 0 var(--underline, #1e90ff60);
+	}
+	@media (prefers-color-scheme: dark) {
+		.link {
+			--underline: theme(colors.accent);
+		}
 	}
 }
 
@@ -35,6 +52,10 @@
 	.h1 { @apply _h text-3xl; }
 	.h2 { @apply _h text-2xl; }
 	.h3 { @apply _h text-xl; }
+
+	.glass {
+		@apply bg-paper/80 backdrop-blur-sm backdrop-saturate-[1.8];
+	}
 
 	/* richtext */
 

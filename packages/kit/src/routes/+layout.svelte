@@ -1,5 +1,5 @@
-<header>
-	<a href="/">🚡 {site.title}</a>
+<header class="sticky top-0 p-4 <md:glass">
+	<a class="lowercase" href="/">🚡 {site.title}</a>
 </header>
 
 <slot></slot>

@@ -10,7 +10,7 @@ export async function load({ params, parent }) {
 		.find(data => slug(getProperty(data, 'Name')) === params.slug)
 
 	if (!result?.id) {
-		throw error(500, 'Page not found')
+		throw error(404, 'The article you\'re looking for doesn\'t exist... 🤷‍♂️')
 	}
 
 	return {

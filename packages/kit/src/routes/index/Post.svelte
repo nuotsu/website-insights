@@ -1,4 +1,4 @@
-<a class="link" href="/blog/{ slug(title) }">
+<a class="inline-block link" href="/blog/{ slug(title) }">
 	<h2>{title}</h2>
 </a>
 
