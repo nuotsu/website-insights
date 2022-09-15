@@ -3,10 +3,10 @@
 </a>
 
 <script>
-	import { getProperty } from '$utils/notion-utils'
+	import { getName } from '$utils/notion-utils'
 	import slug from '$utils/slug'
 
 	export let properties
 
-	const title = getProperty({ properties }, 'Name')
+	const title = getName({ properties }, 'Name')
 </script>

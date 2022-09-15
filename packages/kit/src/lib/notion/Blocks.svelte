@@ -11,9 +11,6 @@
 	{:else if block.type == 'divider'}
 		<hr>
 
-	{:else if block.type == 'embed'}
-		<Embed {...block.embed} />
-
 	{:else}
 		<details class="debug">
 			<summary>block: {block.type}</summary>
@@ -26,7 +23,6 @@
 	import Heading from './Heading.svelte'
 	import RichText from './RichText.svelte'
 	import Image from './Image.svelte'
-	import Embed from './Embed.svelte'
 
 	export let blocks
 </script>

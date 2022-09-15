@@ -12,7 +12,10 @@ export async function load() {
 					status: {
 						equals: 'Published'
 					}
-				} : undefined
+				} : undefined,
+			sorts: [
+				{ property: 'Date', direction: 'descending' }
+			]
 		})
 	}
 }

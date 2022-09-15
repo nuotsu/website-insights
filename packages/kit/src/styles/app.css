@@ -54,7 +54,9 @@
 	.h3 { @apply _h text-xl; }
 
 	.glass {
-		@apply bg-paper/80 backdrop-blur-sm backdrop-saturate-[1.8];
+		@apply
+			bg-paper/80 backdrop-blur-sm backdrop-saturate-[1.8]
+			dark:bg-ink/60;
 	}
 
 	/* richtext */
