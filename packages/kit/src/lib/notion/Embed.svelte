@@ -12,7 +12,11 @@
 	export let url
 
 	async function getTwitterEmbed() {
-		return await fetch(`https://publish.twitter.com/oembed?url=${url}`)
-			.then(res => res.json())
+		return await fetch(`https://publish.twitter.com/oembed?url=${url}`, {
+			headers: {
+				'Access-Control-Allow-Origin': '*',
+			}
+		})
+		.then(res => res.json())
 	}
 </script>
