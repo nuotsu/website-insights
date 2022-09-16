@@ -1,5 +1,5 @@
 <section class="section">
-	<ul class="grid gap-4">
+	<ul class="grid gap-8">
 		{#each results as post}
 			<li>
 				<Post {...post} />

@@ -1,6 +1,6 @@
-<header class="text-center dots moving">
-	<h1 class="section h1">{getName(data.page, 'Name')}</h1>
-</header>
+<Head {title} />
+
+<Header {title} />
 
 <section class="grid gap-y-4 gap-x-8 p-4">
 	<aside class="self-start md:ml-auto md:sticky top-4">
@@ -11,7 +11,7 @@
 
 	<TableOfContents {blocks} />
 
-	<article class="max-w-xl richtext mb-12">
+	<article class="max-w-xl richtext mb-12 <md:mt-12">
 		<Blocks {blocks} />
 	</article>
 </section>
@@ -29,6 +29,8 @@
 		background-clip: text;
 		color: transparent;
 		font-size: 5em;
+		line-height: 0;
+
 		@apply bg-gradient-to-br from-accent to-accent/50 font-serif;
 	}
 
@@ -43,7 +45,9 @@
 </style>
 
 <script>
+	import Head from '$lib/Head.svelte'
 	import { getName } from '$utils/notion-utils'
+	import Header from './Header.svelte'
 	import Blocks from '$lib/notion/Blocks.svelte'
 	import TableOfContents from './TableOfContents.svelte'
 	import ReviewRequest from '$lib/form/ReviewRequest.svelte'
@@ -51,4 +55,6 @@
 	export let data
 
 	const blocks = data.blocks.results
+
+	const title = getName(data.page, 'Name')
 </script>

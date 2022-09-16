@@ -30,17 +30,16 @@
 }
 
 @layer components {
-	.link {
-		text-decoration: underline;
-	}
-	.link:hover {
-		text-decoration: none;
+	.highlight {
 		box-shadow: inset 0 -0.5em 0 var(--underline, #1e90ff60);
 	}
 	@media (prefers-color-scheme: dark) {
-		.link {
-			--underline: theme(colors.accent);
-		}
+		.highlight { --underline: theme(colors.accent); }
+	}
+
+	.link {
+		text-decoration: underline;
+		@apply hover:no-underline hover:highlight;
 	}
 
 	._btn {
