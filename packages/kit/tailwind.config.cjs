@@ -8,6 +8,10 @@ module.exports = {
 				ink: '#000',
 				accent: '#1e90ff',
 			},
+			fontFamily: {
+				sans: "'Didact Gothic', sans-serif",
+				serif: "'Bebas Neue', cursive",
+			},
 			screens: {
 				'xs': { min: '480px' },
 				'<xs': { max: '479px' },

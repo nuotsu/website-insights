@@ -1,3 +1,5 @@
+@import './fonts.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,7 +12,7 @@
 	}
 
 	body {
-		@apply bg-paper text-ink dark:bg-ink dark:text-paper;
+		@apply bg-paper text-ink dark:bg-ink dark:text-paper font-sans;
 	}
 
 	::selection {
@@ -19,6 +21,11 @@
 
 	summary {
 		cursor: pointer;
+	}
+
+	input,
+	textarea {
+		background-color: transparent;
 	}
 }
 
@@ -35,6 +42,15 @@
 			--underline: theme(colors.accent);
 		}
 	}
+
+	._btn {
+		display: inline-flex;
+		justify-content: center;
+		padding: .5em 1em;
+	}
+	.action {
+		@apply _btn bg-ink text-paper dark:bg-paper dark:text-ink;
+	}
 }
 
 @layer utilities {
@@ -42,21 +58,54 @@
 		border: 1px dashed red;
 	}
 
+	._sctn { @apply mx-auto py-12 <md:py-8 px-4; }
+	.section { @apply _sctn max-w-screen-lg; }
+	.section-sm { @apply _sctn max-w-screen-sm; }
+
 	.full-width {
 		width: 100vw;
 		margin-inline: calc(50% - 50vw);
 	}
 
-	._h { @apply font-bold; }
-	.h0 { @apply _h text-4xl; }
-	.h1 { @apply _h text-3xl; }
-	.h2 { @apply _h text-2xl; }
-	.h3 { @apply _h text-xl; }
+	._h { @apply font-serif font-bold; }
+	.h0 { @apply _h text-6xl; }
+	.h1 { @apply _h text-4xl; }
+	.h2 { @apply _h text-3xl; }
+	.h3 { @apply _h text-2xl; }
+	.h4 { @apply _h text-xl; }
+
+	.text-gradient {
+		background-clip: text;
+		color: transparent;
+		@apply bg-gradient-to-br from-accent to-accent/50;
+	}
 
 	.glass {
 		@apply
 			bg-paper/80 backdrop-blur-sm backdrop-saturate-[1.8]
 			dark:bg-ink/60;
+	}
+
+	.dots {
+		--color: #0003;
+		--size: 0.9rem;
+		background-image: radial-gradient(var(--color) 1px, transparent 1px);
+		background-size: var(--size) var(--size);
+	}
+	@media (prefers-color-scheme: dark) {
+		.dots {
+			--color: #fff4;
+		}
+	}
+	.dots.moving {
+		animation: moving 1s linear infinite;
+	}
+	@media (prefers-reduced-motion: reduce) {
+		.dots.moving { animation: none; }
+	}
+	@keyframes moving {
+		0% { background-position: 0 0; }
+		100% { background-position: var(--size) var(--size); }
 	}
 
 	/* richtext */

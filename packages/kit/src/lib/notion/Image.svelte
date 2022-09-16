@@ -2,7 +2,7 @@
 	<div class="<md:full-width"><img src={file.url} alt="" loading="lazy" /></div>
 
 	{#if caption}
-		<figcaption class="mt-2 text-sm">
+		<figcaption class="mt-2 text-sm opacity-60">
 			{#each caption as c}
 				<Text {...c} />
 			{/each}
