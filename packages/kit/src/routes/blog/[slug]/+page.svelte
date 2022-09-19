@@ -4,7 +4,7 @@
 
 <section class="grid gap-y-4 gap-x-8 p-4">
 	<aside class="self-start md:ml-auto md:sticky top-4">
-		<a class="bg-paper dark:bg-ink" href title="Scroll to top">
+		<a href title="Scroll to top">
 			{data.page.icon?.emoji || ''}
 		</a>
 	</aside>
@@ -27,11 +27,10 @@
 
 	article > :global(*:first-child::first-letter) {
 		background-clip: text;
-		color: transparent;
 		font-size: 5em;
 		line-height: 0;
 
-		@apply bg-gradient-to-br from-accent to-accent/50 font-serif;
+		@apply font-serif;
 	}
 
 	article :global(code) {

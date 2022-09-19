@@ -9,7 +9,7 @@
 		<Image {...block.image} />
 
 	{:else if block.type == 'divider'}
-		<hr>
+		<hr class="border-0 border-b border-ink/10 !my-8">
 
 	{:else}
 		<details class="debug">

@@ -1,5 +1,5 @@
 <figure class="text-center">
-	<div class="<md:full-width"><img src={file.url} alt="" loading="lazy" /></div>
+	<img src={file.url} alt="" loading="lazy" />
 
 	{#if caption}
 		<figcaption class="mt-2 text-sm opacity-60">

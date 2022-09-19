@@ -1,4 +1,4 @@
-<header class="text-center dots moving">
+<header class="text-center">
 	<h1 class="section h1">{title}</h1>
 	<p class="flex flex-wrap gap-4 px-4 pb-2 text-sm">
 		<span>📅 <Date date={getDate($page.data.page)} /></span>

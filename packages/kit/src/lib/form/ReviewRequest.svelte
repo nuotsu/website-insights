@@ -1,7 +1,7 @@
 <section class="section-sm">
 	<h2 class="h2 text-center">Get your site reviewed!</h2>
 
-	<Form name="review-request" className="form">
+	<Form name="review-request" className="form mt-4">
 		<Input name="name" label="Name" autocomplete="name" required />
 		<Input name="email" label="Email" type="email" placeholder="Email" required />
 		<Input name="url" label="Website URL" placeholder="https://example.com" required />
@@ -12,7 +12,7 @@
 			rows={3}
 		/>
 
-		<div class="col-span-full text-center">
+		<div class="col-span-full text-center mt-4">
 			<button class="action">Submit your website for review</button>
 			<small class="block">Absolutely free of charge!</small>
 		</div>
